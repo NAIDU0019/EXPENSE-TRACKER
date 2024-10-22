@@ -1,4 +1,7 @@
+# EXPENSE-TRACKER
 Here’s the updated `README.md` with sections for **User Authentication**, **Performance Optimization**, and **Error Handling**:
+
+The Codebase has moved to other branch master in this repositry
 
 ---
 
@@ -51,7 +54,7 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
        "password": "password123"
      }
      ```
-
+     ![USER REGISTER](https://github.com/user-attachments/assets/722971b2-f319-4d88-a40b-31447fd17393)
 2. **User Login**
    - Endpoint: `/users/login`
    - Method: `POST`
@@ -63,6 +66,7 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
        "password": "password123"
      }
      ```
+     ![LOGIN](https://github.com/user-attachments/assets/52858075-d6aa-4913-8c8a-7505d91f5282)
 
 3. **Retrieve User Details**
    - Endpoint: `/users/:id`
