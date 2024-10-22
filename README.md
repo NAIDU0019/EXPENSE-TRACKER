@@ -54,6 +54,7 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
        "password": "password123"
      }
      ```
+     ![USER REGISTER](https://github.com/user-attachments/assets/722971b2-f319-4d88-a40b-31447fd17393)
 2. **User Login**
    - Endpoint: `/users/login`
    - Method: `POST`
