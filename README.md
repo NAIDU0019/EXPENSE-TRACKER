@@ -66,6 +66,7 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
        "password": "password123"
      }
      ```
+     ![LOGIN](https://github.com/user-attachments/assets/52858075-d6aa-4913-8c8a-7505d91f5282)
 
 3. **Retrieve User Details**
    - Endpoint: `/users/:id`
