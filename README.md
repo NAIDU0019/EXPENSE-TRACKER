@@ -110,6 +110,7 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
        ]
      }
      ```
+![create expense](https://github.com/user-attachments/assets/77915726-6dfb-48b8-b09e-9e3f9207a692)
 
 2. **Retrieve Individual Expenses** (Authenticated)
    - Endpoint: `/expenses/user/:id`
