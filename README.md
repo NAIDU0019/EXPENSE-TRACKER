@@ -54,7 +54,7 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
        "password": "password123"
      }
      ```
-
+![USER REGISTER](https://drive.google.com/file/d/1vZFZhUd8aqRZFZ8W_3xfkjufGExefCJS/view?usp=sharing)
 2. **User Login**
    - Endpoint: `/users/login`
    - Method: `POST`
