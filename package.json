@@ -2,9 +2,9 @@
   "name": "expenses-sharing-app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-  "dev": "nodemon server.js",
+  "dev": "nodemon app.js",
   "test": "jest"
 },
   "keywords": [],
