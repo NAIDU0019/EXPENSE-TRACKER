@@ -1,6 +1,4 @@
 // server.js
-
-
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -8,7 +6,7 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 const expenseRoutes = require('./routes/expenseRoutes');
 
-
+const { router } = require('./routes/expenseRoutes');
 // Load environment variables from .env file
 dotenv.config();
 
@@ -36,11 +34,12 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON requests
 
-
+app.use(cors({
+    methods: ['GET', 'POST', 'PUT']
+  }));
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api', expenseRoutes); // Update this line to include /expenses
-
 
 // Start server and connect to MongoDB
 const PORT = process.env.PORT || 5000;
