@@ -8,4 +8,7 @@ router.get('/expenses/:id', expenseController.getExpense);
 router.put('/expenses/:id', expenseController.updateExpense);
 router.delete('/expenses/:id', expenseController.deleteExpense);
 
+router.get('/expenses/user/:id', expenseController.getUserExpenses);
+router.get('/expenses', expenseController.getAllExpenses);
+router.get('/balance-sheet', expenseController.downloadBalanceSheet);
 module.exports = router;
