@@ -72,6 +72,8 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
    - Endpoint: `/users/:id`
    - Method: `GET`
    - Description: Retrieves details of a specific user by ID (requires authentication).
+  
+   - 
 
 ### Expense Endpoints
 1. **Add Expense** (Authenticated)
@@ -112,20 +114,224 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
      ```
 ![create expense](https://github.com/user-attachments/assets/77915726-6dfb-48b8-b09e-9e3f9207a692)
 
-2. **Retrieve Individual Expenses** (Authenticated)
+2.**Updating Existing Expense**
+
+![put1](https://github.com/user-attachments/assets/70ed9f8a-8bae-44bc-aafa-d55375275123)
+![put1 2](https://github.com/user-attachments/assets/b08d0b0c-4690-4ac9-a86e-18becc97e426)
+
+3. **Retrieve Individual Expenses** (Authenticated)
    - Endpoint: `/expenses/user/:id`
    - Method: `GET`
    - Description: Retrieve all expenses associated with a specific user (with pagination support).
+  
+      ![retrive overall](https://github.com/user-attachments/assets/0db18e18-6b08-477a-b175-f4e4f1509c84)
 
-3. **Retrieve Overall Expenses** (Authenticated)
+4. **Retrieve Overall Expenses** (Authenticated)
    - Endpoint: `/expenses`
    - Method: `GET`
    - Description: Retrieve all expenses across all users (with pagination support).
+  
+   -
+  
+   - http://localhost:5000/api/expenses
+   - [
+    {
+        "_id": "6717938afe7d4fef83870ad5",
+        "description": "Updated description",
+        "totalAmount": 200,
+        "createdBy": {
+            "_id": "67165488dcc93a1562be8507",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "participants": [
+            {
+                "user": "67165488dcc93a1562be8507",
+                "amountOwed": 100,
+                "_id": "6717d8d799e0380891ac7696"
+            },
+            {
+                "user": "671657ab002eb205abbb12de",
+                "amountOwed": 100,
+                "_id": "6717d8d799e0380891ac7697"
+            }
+        ],
+        "createdAt": "2024-10-22T11:59:06.939Z",
+        "updatedAt": "2024-10-22T16:54:47.283Z",
+        "__v": 0
+    },
+    {
+        "_id": "67179425fe7d4fef83870adc",
+        "description": "Dinner with friends",
+        "totalAmount": 100,
+        "createdBy": {
+            "_id": "67165488dcc93a1562be8507",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "participants": [
+            {
+                "user": "67165488dcc93a1562be8507",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "67179425fe7d4fef83870add"
+            },
+            {
+                "user": "671657ab002eb205abbb12de",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "67179425fe7d4fef83870ade"
+            }
+        ],
+        "createdAt": "2024-10-22T12:01:41.997Z",
+        "updatedAt": "2024-10-22T12:01:41.997Z",
+        "__v": 0
+    },
+    {
+        "_id": "6717ab36a40fada8af76d5a5",
+        "description": "Dinner with friends",
+        "totalAmount": 100,
+        "createdBy": {
+            "_id": "67165488dcc93a1562be8507",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "participants": [
+            {
+                "user": "67165488dcc93a1562be8507",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717ab37a40fada8af76d5a6"
+            },
+            {
+                "user": "671657ab002eb205abbb12de",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717ab37a40fada8af76d5a7"
+            }
+        ],
+        "createdAt": "2024-10-22T13:40:07.037Z",
+        "updatedAt": "2024-10-22T13:40:07.037Z",
+        "__v": 0
+    },
+    {
+        "_id": "6717ab83a40fada8af76d5a9",
+        "description": "Dinner with friends",
+        "totalAmount": 100,
+        "createdBy": {
+            "_id": "67165488dcc93a1562be8507",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "participants": [
+            {
+                "user": "67165488dcc93a1562be8507",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717ab83a40fada8af76d5aa"
+            },
+            {
+                "user": "671657ab002eb205abbb12de",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717ab83a40fada8af76d5ab"
+            }
+        ],
+        "createdAt": "2024-10-22T13:41:23.189Z",
+        "updatedAt": "2024-10-22T13:41:23.189Z",
+        "__v": 0
+    },
+    {
+        "_id": "6717b3a54a9165d9d073fb10",
+        "description": "Dinner with friends",
+        "totalAmount": 100,
+        "createdBy": {
+            "_id": "67165488dcc93a1562be8507",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "participants": [
+            {
+                "user": "67165488dcc93a1562be8507",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717b3a54a9165d9d073fb11"
+            },
+            {
+                "user": "671657ab002eb205abbb12de",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717b3a54a9165d9d073fb12"
+            }
+        ],
+        "createdAt": "2024-10-22T14:16:05.206Z",
+        "updatedAt": "2024-10-22T14:16:05.206Z",
+        "__v": 0
+    },
+    {
+        "_id": "6717cf728b4f5b292f4e404e",
+        "description": "Dinner with friends",
+        "totalAmount": 100,
+        "createdBy": {
+            "_id": "67165488dcc93a1562be8507",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "participants": [
+            {
+                "user": "67165488dcc93a1562be8507",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717cf728b4f5b292f4e404f"
+            },
+            {
+                "user": "671657ab002eb205abbb12de",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6717cf728b4f5b292f4e4050"
+            }
+        ],
+        "createdAt": "2024-10-22T16:14:42.071Z",
+        "updatedAt": "2024-10-22T16:14:42.071Z",
+        "__v": 0
+    },
+    {
+        "_id": "6718742a724cc55f8b27f82a",
+        "description": "Dinner with friends",
+        "totalAmount": 100,
+        "createdBy": {
+            "_id": "67165488dcc93a1562be8507",
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "participants": [
+            {
+                "user": "67165488dcc93a1562be8507",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6718742a724cc55f8b27f82b"
+            },
+            {
+                "user": "671657ab002eb205abbb12de",
+                "amountOwed": 50,
+                "splitMethod": "equal",
+                "_id": "6718742a724cc55f8b27f82c"
+            }
+        ],
+        "createdAt": "2024-10-23T03:57:30.491Z",
+        "updatedAt": "2024-10-23T03:57:30.491Z",
+        "__v": 0
+    }
+]
 
-4. **Download Balance Sheet** (Authenticated)
+
+5. **Download Balance Sheet** (Authenticated)
    - Endpoint: `/balance-sheet`
    - Method: `GET`
    - Description: Download the overall balance sheet in a downloadable format (e.g., CSV or PDF).
+  
+   - ![balancesheet](https://github.com/user-attachments/assets/410db924-044c-4039-920f-3c1117712617)
+
 
 ---
 
@@ -162,7 +368,8 @@ This project is a backend service for a **Daily Expenses Sharing Application** t
   - Implement proper error handling to return appropriate HTTP status codes (e.g., `400` for bad requests, `401` for unauthorized access, etc.).
   - Return meaningful error messages to help users troubleshoot issues.
 
----
+---**Email validation**
+  - The user is unable to register if provided with incorrect email address and prompts Invalid email address.If any of the field in the register field is missing it prompts to add all details .
 
 ## Setup Instructions
 
