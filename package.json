@@ -1,12 +1,13 @@
 {
   "name": "expenses-sharing-app",
   "version": "1.0.0",
+  
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-  "dev": "nodemon app.js",
-  "test": "jest"
-},
+    "dev": "nodemon server.js",
+    "test": "jest"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,9 +18,14 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "jsonwebtoken": "^9.0.2",
+    "joi": "^17.13.3",
+    "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "^9.0.2"a,
     "jwt-simple": "^0.5.6",
-    "mongoose": "^8.7.2"
+    "mongoose": "^8.7.2",
+    "mongoose-paginate": "^5.0.3",
+    "pdfkit": "^0.15.0",
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "chai": "^5.1.1",
