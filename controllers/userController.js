@@ -1,7 +1,9 @@
 const User = require('../models/UserModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
+const express = require('express');
+const router = express.Router();
+const authenticate = require('../middleware/authMiddleware');
 // User Registration
 // In userController.js
 exports.createUser = async (req, res) => {
@@ -10,6 +12,10 @@ exports.createUser = async (req, res) => {
 
     if (!name || !email || !mobile || !password) {
       return res.status(400).json({ message: 'All fields are required' });
+    }
+
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      return res.status(400).json({ message: 'Invalid email address' });
     }
 
     const existingUser = await User.findOne({ email });
@@ -69,3 +75,4 @@ exports.getUserDetails = async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 };
+
