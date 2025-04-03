@@ -1,7 +1,4 @@
 # EXPENSE-TRACKER
-Here’s the updated `README.md` with sections for **User Authentication**, **Performance Optimization**, and **Error Handling**:
-
-The Codebase has moved to other branch master in this repositry
 
 ---
 
